@@ -1,10 +1,12 @@
 # Лабораторная работа №1
 Пример работы программы:
+
 <img width="575" height="634" alt="image" src="https://github.com/user-attachments/assets/e01d6651-cf26-4e89-8d19-8049e55470a0" />
 
 <img width="256" height="106" alt="image" src="https://github.com/user-attachments/assets/179d345c-e4ba-41ac-9a90-fc99733e70e0" />
 
 Код программмы:
+
 <img width="495" height="482" alt="image" src="https://github.com/user-attachments/assets/74f3a0e4-4950-4070-a7f2-dddae9b018ec" />
 
 <img width="406" height="311" alt="image" src="https://github.com/user-attachments/assets/0dbd0fe6-a442-449b-a6c7-a40f45f08094" />

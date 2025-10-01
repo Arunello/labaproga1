@@ -5,19 +5,41 @@
 int main() 
 {
     setlocale(0, "");
-/*
+{
+    union FloatUnion 
+    {
+    float f;
+    int u;
+    };
 
-5) Реализовать возможность произвольного изменения любого бита в введенном числе (для всех типов данных) с использованием логических операций.
+    std::cout << "ИДЗ\n\nВведите число\n";
 
-*/
+	unsigned int inf = 0b1111111100000000000000000000000;
+    unsigned int mask =0b1111111111111111111111111111111;
+    FloatUnion value;
+
+    std::cin >> value.f;
+
+    value.u = (value.u & ~mask) | (inf & mask);
+
+    std::cout << "Бесконечность: "<< value.f;
+}
 
 
-// 1
+std::cout << "\n\nЗадание 1\n\n";
 
 
 {
-    std::cout << "Задание 1\n\n";
-    std::cout << "int: " << sizeof(int) << "\nshort int: " << sizeof(short int) << "\nlong int: " <<  sizeof(long int) << "\nfloat: " << sizeof(float) << "\ndouble: " <<  sizeof(double) << "\nlong double: " << sizeof(long double) << "\nchar: " << sizeof(char) << "\nbool: " << sizeof(bool);
+    
+    std::cout 
+    << "int: " << sizeof(int)
+    << "\nshort int: " << sizeof(short int) 
+    << "\nlong int: " <<  sizeof(long int) 
+    << "\nfloat: " << sizeof(float) 
+    << "\ndouble: " <<  sizeof(double) 
+    << "\nlong double: " << sizeof(long double) 
+    << "\nchar: " << sizeof(char) 
+    << "\nbool: " << sizeof(bool);
 }
 
 
@@ -30,7 +52,7 @@ std::cout << "\n\nЗадание 2\n\n";
 
     int value;
     std::cin >> value;
-	unsigned int order = (sizeof(int)*8);
+	int order = (sizeof(int)*8);
 	unsigned int mask = 1 << (order - 1);
 
     std::cout << value << " = ";
@@ -52,7 +74,8 @@ std::cout << "\n\nЗадание 3\n\n";
 
 
 {
-union FloatUnion {
+union FloatUnion 
+{
     float f;
     int u;
 };
@@ -81,7 +104,8 @@ std::cout << "\n\nЗадание 4\n\n";
 
 
 {
-union DoubleUnion {
+union DoubleUnion 
+{
     double d;
     unsigned long int u;
 };
@@ -113,7 +137,8 @@ std::cout << "\n\nЗадание 5\n\n";
 {
     
 
-    union DoubleIntUnion {
+    union DoubleIntUnion 
+    {
     double d;
     long int u;
     };

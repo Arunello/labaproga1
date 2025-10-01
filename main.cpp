@@ -6,6 +6,7 @@ int main()
 {
     setlocale(0, "");
 {
+    //17 Создание бесконечности. Установите все биты порядка в 1, а все биты мантиссы — в 0. Знаковый бит оставьте без изменения. Вы получите +inf или -inf.
     union FloatUnion 
     {
     float f;
@@ -15,7 +16,7 @@ int main()
     std::cout << "ИДЗ\n\nВведите число\n";
 
 	unsigned int inf = 0b1111111100000000000000000000000;
-    unsigned int mask =0b1111111111111111111111111111111;
+    unsigned int mask = 0b1111111111111111111111111111111;
     FloatUnion value;
 
     std::cin >> value.f;
@@ -52,7 +53,8 @@ std::cout << "\n\nЗадание 2\n\n";
 
     int value;
     std::cin >> value;
-	int order = (sizeof(int)*8);
+
+	int order = (sizeof(int) * 8);
 	unsigned int mask = 1 << (order - 1);
 
     std::cout << value << " = ";
@@ -85,7 +87,8 @@ union FloatUnion
 
     FloatUnion fu;
     std::cin >> fu.f;
-    int order = (sizeof(float)*8);
+
+    int order = (sizeof(float) * 8);
     unsigned int mask = 1 << (order - 1);
 
     std::cout << fu.f << " = ";
@@ -116,7 +119,7 @@ union DoubleUnion
     DoubleUnion du;
     std::cin >> du.d;
 
-    int order = (sizeof(double)*8);
+    int order = (sizeof(double) * 8);
     unsigned long int mask = 1ULL << (order - 1);
 
     std::cout << du.d << " = ";
@@ -155,7 +158,7 @@ std::cout << "\n\nЗадание 5\n\n";
         std::cout << "Введите целое число\n";
         std::cin >> diu.u;
 
-        int order = (sizeof(long int)*8);
+        int order = (sizeof(long int) * 8);
 	    unsigned long int mask = 1ULL << (order - 1);
 
         std::cout << diu.u << " = ";
@@ -203,7 +206,7 @@ std::cout << "\n\nЗадание 5\n\n";
         std::cout << "Введите дробное число\n";
         std::cin >> diu.d;
 
-        int order = (sizeof(double)*8);
+        int order = (sizeof(double) * 8);
         unsigned long int mask = 1ULL << (order - 1);
 
         std::cout << diu.d << " = ";

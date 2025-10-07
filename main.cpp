@@ -10,7 +10,7 @@ int main()
     union FloatUnion 
     {
     float f;
-    int u;
+    unsigned int u;
     };
 
     std::cout << "ИДЗ\n\nВведите число\n";
@@ -79,7 +79,7 @@ std::cout << "\n\nЗадание 3\n\n";
 union FloatUnion 
 {
     float f;
-    int u;
+    unsigned int u;
 };
 
 
@@ -110,7 +110,7 @@ std::cout << "\n\nЗадание 4\n\n";
 union DoubleUnion 
 {
     double d;
-    unsigned long int u;
+    unsigned long long u;
 };
 
 
@@ -143,7 +143,7 @@ std::cout << "\n\nЗадание 5\n\n";
     union DoubleIntUnion 
     {
     double d;
-    long int u;
+    unsigned long long u;
     };
 
     std::cout << "Выберите тип вводимого числа:\n1. Целое\n2. Дробное\n";
@@ -159,7 +159,7 @@ std::cout << "\n\nЗадание 5\n\n";
         std::cin >> diu.u;
 
         int order = (sizeof(long int) * 8);
-	    unsigned long int mask = 1ULL << (order - 1);
+	    unsigned long long mask = 1ULL << (order - 1);
 
         std::cout << diu.u << " = ";
 
@@ -207,7 +207,7 @@ std::cout << "\n\nЗадание 5\n\n";
         std::cin >> diu.d;
 
         int order = (sizeof(double) * 8);
-        unsigned long int mask = 1ULL << (order - 1);
+        unsigned long long mask = 1ULL << (order - 1);
 
         std::cout << diu.d << " = ";
 
